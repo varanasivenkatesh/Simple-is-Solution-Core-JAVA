@@ -1,0 +1,34 @@
+import java.util.HashMap;
+import java.util.Map;
+
+public class HighestFreq {
+	
+	public static void main(String[] args) {
+
+	 int a[]={2,2,2,25,3,5,7,5,2};
+	 Integer pc = 0;
+	 Integer pv = 0;
+	 Map<Integer, Integer> s = new HashMap<>();
+	 for(int i=0;i<a.length;i++){
+		 Integer count = s.get(a[i]);
+		 if(count==null){
+			 count =0;
+			 
+		 }
+		 s.put(a[i], count==0?1:++count);
+		 
+		 if(count>pc){
+			 pc = count;
+			 pv = a[i];
+		 }
+	 }
+	 
+	 System.out.println("Frequency::"+pc);
+	 System.out.println("Number::"+pv);
+	 
+	
+	}
+}
+//Ouput
+// Frequency :4
+//Number :2
