@@ -1,0 +1,27 @@
+import java.util.LinkedHashSet;
+import java.util.Set;
+
+public class RemoveDuplicateString {
+	
+	public static void removeStringDuplicate(String inputString){
+		Set<Character> s = new LinkedHashSet<>();
+		for(int i=0;i<inputString.length();i++){
+			s.add(inputString.charAt(i));
+		}
+		StringBuilder sb = new StringBuilder(s.size());
+		for(final Character cr:s){
+			sb.append(cr);
+		}
+		
+		System.out.println("Final String::"+sb);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		RemoveDuplicateString.removeStringDuplicate("Rama");
+
+	}
+
+}
+//Output
+Final String:Ram
