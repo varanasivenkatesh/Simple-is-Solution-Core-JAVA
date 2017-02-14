@@ -1,0 +1,18 @@
+// program to reverse String with out using collections and temp string
+
+public class ReverseString {
+
+	public static String  reverseString(String inputString){
+		if(inputString.length()<=1){
+			return inputString;
+		}
+		return reverseString(inputString.substring(1))+inputString.charAt(0);
+	}
+
+	public static void main(String[] args) {
+		System.out.println(reverseString("hello"));
+	}
+}
+
+
+//Ouput-----------------wolleh
